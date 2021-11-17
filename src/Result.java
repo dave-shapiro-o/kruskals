@@ -86,7 +86,7 @@ public class Result {
 
     public static void union(int rootA, int rootB) {
 
-        // Join the smaller subgroup to the larger
+        // Join the smaller subgroup to the larger, and set its root to the larger one's root
         if (size[rootA] < size[rootB]) {
             size[rootB] += size[rootA];
             size[rootA] = 0;
