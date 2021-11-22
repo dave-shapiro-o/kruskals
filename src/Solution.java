@@ -3,29 +3,14 @@ import java.util.concurrent.TimeUnit;
 
 class Solution {
     public static void main(String[] args) {
-        List<Integer> fromNodes = new ArrayList<>();
-        fromNodes.add(1);
-        fromNodes.add(3);
-        fromNodes.add(4);
-        fromNodes.add(2);
-        fromNodes.add(1);
-        fromNodes.add(5);
+        Integer[] from = new Integer[]{1, 3, 4, 2, 1, 5};
+        List<Integer> fromNodes = Arrays.asList(from);
 
-        List<Integer> toNodes = new ArrayList<>();
-        toNodes.add(2);
-        toNodes.add(2);
-        toNodes.add(3);
-        toNodes.add(4);
-        toNodes.add(4);
-        toNodes.add(1);
+        Integer[] to = new Integer[]{2, 2, 3, 4, 4, 1};
+        List<Integer> toNodes = Arrays.asList(to);
 
-        List<Integer> edgeWeights = new ArrayList<>();
-        edgeWeights.add(1);
-        edgeWeights.add(150);
-        edgeWeights.add(99);
-        edgeWeights.add(100);
-        edgeWeights.add(100);
-        edgeWeights.add(200);
+        Integer[] weights = new Integer[]{1, 150, 99, 100, 100, 200};
+        List<Integer> edgeWeights = Arrays.asList(weights);
 
         long startTime = System.nanoTime();
         int totalMstWeight = Result.kruskals(5, fromNodes, toNodes, edgeWeights);
