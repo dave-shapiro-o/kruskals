@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Result {
 
-    static int numComponents;
     static int[] graph;
     static int[] size;
 
@@ -96,6 +95,5 @@ public class Result {
             size[rootB] = 0;
             graph[rootB] = rootA;
         }
-        --numComponents;
     }
 }
